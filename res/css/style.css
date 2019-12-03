@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* -----Navigation------- */
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80px;
+    background-color: #DEC79B;
+    border-bottom: 2px solid white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: #18181E;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.link-access li {
+    list-style-type: none;
+    overflow-y: hidden;
+}
+
+li a {
+    text-decoration: none;
+    color: #18181E;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+li a:hover {
+    text-decoration: underline;
+    opacity: 0.6;
+}
+
+
+#logo {
+    position: absolute;
+    border-radius: 50%;
+   /* padding: 30px 35px; */
+    padding-top: 10px;
+    background-color:#DEC79B;
+    z-index: 2;
+    width: 190px;
+    text-align: center;
+    border-bottom: 3px solid white;
+}
+
+h1 {
+    font-family:'Cormorant', serif;
+    font-size: 40px;
+    padding: 0 32px;
+    margin-top: 15px;
+    color: #18181E; 
+}
+
+h1 span {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 18px;
+    margin-top: 0px;
+    padding: 0;
+    color: #18181E;
+}
+
+#logo img {
+    margin-top: 10px;
+    padding-bottom: 3px;
+    padding: 0 5px;
+    width: 45%;
+    height: auto;
+    z-index: 1;
+}
+
+#burger-nav {
+    padding: 5px 5px;
+   /* border-radius: 50%;
+    background-color:#f5f1eb;
+    display: none; */
+}
+
+#burger-nav div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #18181E;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 970px) {
+    #burger-nav {
+      position: absolute;
+      right: 50px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .link-access {
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 80px;
+        background-color: #DEC79B; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in; 
+        z-index: 1;
+    }
+
+    .link-access li {
+      opacity: 0;
+        
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .link1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .link2 {
+    opacity: 0;
+}
+.toggle .link3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* -------------Content Section------------------ */
+
+section {
+    background-color: rgb(39, 39, 48);
+    width: 100vw;
+    height: 92vh;
+    overflow-x: hidden;
+}
+
+#panel {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+#panel img {
+    width: 100vw;
+    height: 92vh;
+}
+
+#text-background {
+    position: absolute;
+    background-color: rgb(39, 39, 48);
+    width: 100vw;
+    height: 92vh;
+    opacity: 0.6;
+}
+
+h2 {
+    color: white;
+    position: absolute;
+    font-size: 4.5rem;
+    top: 50%;
+    font-family: 'Gentium Book Basic', serif;
+    transition: 1s ease;
+}
+
+#word-text {
+    animation-name: wordflip;
+    animation-duration: 9s;
+    position: relative;
+
+}
+
+@keyframes wordflip {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        translate: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+/* -------------- Footer ------------------------- */
+
+footer {
+    width: 100vw;
+    height: 8vh;
+    overflow-x: hidden;
+    background-color: #DEC79B;
+    border-top: 3.5px solid white;
+}
